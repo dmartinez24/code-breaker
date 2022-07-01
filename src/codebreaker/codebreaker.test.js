@@ -18,4 +18,25 @@ describe("Codebreaker logica", () => {
 
     expect(cb.codigo).toEqual("8976");
   });
+
+  it("contiene 2 numeros", () => {
+    const cb = new Codebreaker("");
+    const msg = cb.adivinar("1200");
+
+    expect(msg).toEqual("Contiene 2!");
+  });
+
+  it("contiene 3 numeros", () => {
+    const cb = new Codebreaker("");
+    const msg = cb.adivinar("1230");
+
+    expect(msg).toEqual("Contiene 3!");
+  });
+
+  it("contiene 4 numeros", () => {
+    const cb = new Codebreaker("");
+    const msg = cb.adivinar("4321");
+
+    expect(msg).toEqual("Contiene 4!");
+  });
 });

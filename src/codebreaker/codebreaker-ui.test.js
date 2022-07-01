@@ -38,4 +38,13 @@ describe("Codebreaker UI", () => {
     form.click();
     expect(resultado.innerHTML).toEqual("Perdiste!");
   });
+
+  it("hay un numero correcto en la posicion incorrecta", () => {
+    const numero = document.querySelector("#numero");
+    const form = document.querySelector("#adivinar-submit");
+    const resultado = document.querySelector("#resultado");
+    numero.value = "1000";
+    form.click();
+    expect(resultado.innerHTML).toEqual("Contiene 1!");
+  });
 });
