@@ -25,8 +25,17 @@ describe("Codebreaker UI", () => {
     const numero = document.querySelector("#numero");
     const form = document.querySelector("#adivinar-submit");
     const resultado = document.querySelector("#resultado");
-    numero.value = "5";
+    numero.value = "1234";
     form.click();
     expect(resultado.innerHTML).toEqual("Ganaste!");
+  });
+
+  it("No adivino el codigo", () => {
+    const numero = document.querySelector("#numero");
+    const form = document.querySelector("#adivinar-submit");
+    const resultado = document.querySelector("#resultado");
+    numero.value = "6";
+    form.click();
+    expect(resultado.innerHTML).toEqual("Perdiste!");
   });
 });
